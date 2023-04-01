@@ -29,19 +29,47 @@ public class Operaciones {
 		y = var2.nextInt();
 		
 		//Realización de las operaciones
-		suma = x+y;
-		resta = x-y;
-		multiplicacion = x+y;
-		division = x/y;
+		suma = sumar(x, y);
+		resta = restar(x, y);
+		multiplicacion = multiplicar(x, y);
+		division = dividir(x, y);
 		
 		//Mostrar por pantalla los resultados
+		visualizar(suma, resta, multiplicacion, division);
+		
+		
+
+	}
+
+	private static void visualizar(int suma, int resta, int multiplicacion, int division) {
 		System.out.println("La Suma es = "+suma);
 		System.out.println("La Resta es = "+resta);
 		System.out.println("La suma es = "+multiplicacion);
 		System.out.println("La suma es = "+division);
-		
-		
+	}
 
+	private static int dividir(int x, int y) {
+		int division;
+		division = x/y;
+		return division;
+	}
+
+	private static int multiplicar(int x, int y) {
+		int multiplicacion;
+		multiplicacion = x*y;
+		return multiplicacion;
+	}
+
+	private static int restar(int x, int y) {
+		int resta;
+		resta = x-y;
+		return resta;
+	}
+
+	private static int sumar(int x, int y) {
+		int suma;
+		suma = x+y;
+		return suma;
 	}
 
 }
